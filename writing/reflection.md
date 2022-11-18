@@ -1,24 +1,26 @@
 # Contact Searching
 
-TODO: Make sure that you delete all of the TODO markers and the written prompts
+TO-DO: Make sure that you delete all of the TO-DO markers and the written prompts
 from this document. You should also ensure that the document does not have any
 mistakes in spelling, grammar, or the syntax of Markdown. Ultimately, the final
 version of your reflection should be a polished document that is suitable for
 publication on your web site.
 
-## Add Your Name Here
+## Will Wolff
 
 ## Program Output
 
 ### What is the output from running the following commands?
 
-TODO: Use a fenced code block to provide the output for this command.
-
+```bash
 - `poetry run contactsearcher --job-description "engineer" --contacts-file input/contacts.txt`
+```
 
-TODO: Use a fenced code block to provide the output for this command.
+```bash
 
 - `poetry run contactsearcher --job-description "neer" --contacts-file input/contacts.txt`
+
+```
 
 ## Source Code and Configuration Files
 
@@ -26,8 +28,11 @@ TODO: Use a fenced code block to provide the output for this command.
 
 #### The source code statement that makes the `search` module available to `main`
 
-TODO: Use a fenced code block to provide the requested source code
-TODO: Write at least one paragraph to explain the request source code
+```bash
+from contactsearcher import search
+```
+
+The source code above is asking to call the code within the file of contactsearcher and find and import the code of search and put it in the main code being used. The data needs the import in order for the output to be the desired one asked for. The imported data is used in the output by running the code for the data
 
 #### The source code statement that extracts the current job description for a contact
 

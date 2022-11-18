@@ -8,8 +8,7 @@ from typing import Optional
 from pathlib import Path
 
 from contactsearcher import search
-# TODO: create a Typer object to support the command-line interface
-
+# TO-DO: create a Typer object to support the command-line interface
 cli = typer.Typer()
 
 @cli.command()
@@ -41,8 +40,17 @@ def contactsearcher(
         f'  We are looking for contacts who have a job related to "{job_description}":'
     )
     typer.echo("")
-    output = search.search_for_email_given_job(job_description, contacts_file)
-    typer.echo(f"{output}")
+    output = search.search_for_email_given_job(job_description, contacts_text)
+    
+    if output:
+        # typer.echo(f"{output}")
+        for contact in output:
+            print(" " + "is a ".join(map(str, contact)))
+    typer.echo("")
+    if len(output) == 0:
+        typer.echo("Sorry wasnt found")
+    else:
+        typer.echo("Wow, we found some contacts! Email them to learn about your job!")
     # TO-DO: perform the search for all of the relevant email addresses given the job description
     # TO-DO: we know that there are some contacts in the list, so iterate through the list of
     # the contacts and display them in the terminal window
