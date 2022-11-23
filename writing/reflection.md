@@ -42,7 +42,8 @@ current_contact_job = contact_line[1]
             list_contacts.append(contact_line)
 
 ```
-TODO: Write at least one paragraph to explain the request source code
+
+The code is reading the current job contact and saying that equals the contactline of a 1 count. It then goes and reads that if the job description inputted is in the current contact job, then they should append that job to the list and then the list is returned and that is ouputted as a result if it is found within the list.
 
 #### Invocation of the function called `search_for_email_given_job`
 
@@ -61,7 +62,7 @@ def search_for_email_given_job(job_description: str, contacts: str) -> List[List
 
 ```
 
-TODO: Write at least one paragraph to explain the request source code
+The list contacts is first defined in the beginning same with lines as the csv reader. It is then run through a for loop looking at the current job with reads the contact line 1 spot ahead. It read an if statement asking that if the job description inputted is in the current contact job, then they should append that job to the list and then the list is returned and that is ouputted as a result if it is found within the list.
 
 #### Test case for the function called `search_for_email_given_job`
 
@@ -78,17 +79,11 @@ tests/test_search.py .....
 
 ```
 
-TODO: Write at least one paragraph to explain the request source code
+This shows the result of when we run the test case in order to check for any flaws in the code htat dont give a negative results that diveret from thr expected output. When Looking at the ouputs that are expected to print with this code, this is suppoed to give us this output saying that all five of the test cases were able to pass and it was all correct.
 
 #### Execute trace of the `contactsearcher` program
 
-TODO: Explain each function call that takes place for the following run of the program
-TODO: Write at least one paragraph to explain every function call when running `contactsearcher`
-
-TODO: Your discussion should start with the invocation of the `contactsearcher`
-function in the `main` module, explain all of the subsequent function calls in
-the correct order, and then show how the program's control returns to the
-`contactsearcher` function in the `main` module.
+When running the command below, the output shows the full list of the requested information that was called for in the input. In the input, it is calling for the contactsearcher and inputting the words of engineer for job description and contacts.txt for contacts-file. 
 
 - `poetry run contactsearcher --job-description "engineer" --contacts-file input/contacts.txt`
 
@@ -96,8 +91,8 @@ the correct order, and then show how the program's control returns to the
 
 ### So far this semester, what is one area in which you have struggled? How did you overcome this challenge?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
+One area I have struggled is with the print statements and what to return in my code. When trying to return code at first, I wasnt sure what was needed to print in order for the certain code to work. Most of the time when trying to run a code and I was returning something, it usually was incorrect and was giving error messages. When trying to solve what was wrong with the code, I went to Professor Bonham Carter and looked up solutions to the areas I was stuck in.
 
 ### Based on your experiences with this project, what is one way in which you want to improve?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
+I would try to avoid the csv reader. The csv reader seems very unnecessary and just seems like a very large loop to go around and not really needed. I think you can simplify and not use the code that was needed. The code could be changed into something using an append function or another route and it could be easier for the code to run with one less imported function.
